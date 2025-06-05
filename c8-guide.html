@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C8 工卡攻略</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>C8 工卡攻略合集</h1>
+  </header>
+  <section>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索攻略关键词..." onkeyup="searchPosts()" />
+    </div>
+    <div id="posts">
+      <div class="post">
+        <h2><a href="post1.html">如何更新 C8 工卡？完整流程解说</a></h2>
+        <p>续卡流程步骤、资料准备和时间节点完整讲解。</p>
+      </div>
+      <div class="post">
+        <h2><a href="post2.html">在线提交说明</a></h2>
+        <p>教您如何通过 USCIS 网站在线提交 I-765 表格。</p>
+      </div>
+      <div class="post">
+        <h2><a href="post3.html">纸质邮寄方式说明</a></h2>
+        <p>适用于希望打印表格并邮寄提交的客户。</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>微信：milumilu2023666 | 邮箱：c8help@outlook.com</p>
+  </footer>
+  <script>
+    function searchPosts() {
+      var input = document.getElementById('searchInput').value.toLowerCase();
+      var posts = document.querySelectorAll('#posts .post');
+      posts.forEach(post => {
+        const text = post.textContent.toLowerCase();
+        post.style.display = text.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
